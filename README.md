@@ -1,3 +1,5 @@
+> This branch is a modified version of [merequester](https://github.com/AlmostReliable/merequester), ported to Minecraft 26.2 and NeoForge 26.2.0.93 for the MC Warfare modpack. Changed by Rowan, 2026-11-01. See the commit on this branch for what changed.
+
 <h1 align="center">
     <a href="https://github.com/AlmostReliable/merequester"><img src=https://i.imgur.com/tnrrPff.png" alt="Preview" width=200></a>
     <p>ME Requester</p>

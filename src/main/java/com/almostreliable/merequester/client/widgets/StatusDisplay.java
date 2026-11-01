@@ -11,6 +11,7 @@ import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.input.MouseButtonInfo;
 import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextColor;
 
 import appeng.client.gui.widgets.ITooltip;
 
@@ -40,7 +41,7 @@ public class StatusDisplay extends AbstractWidget implements ITooltip {
     @SuppressWarnings("DataFlowIssue")
     @Override
     public void extractWidgetRenderState(GuiGraphicsExtractor guiGraphics, int mX, int mY, float partialTick) {
-        guiGraphics.fill(getX(), getY(), getX() + width, getY() + height, 0xFF << 3 * 8 | getStatusColor().getColor());
+        guiGraphics.fill(getX(), getY(), getX() + width, getY() + height, 0xFF << 3 * 8 | TextColor.fromLegacyFormat(getStatusColor()).getValue());
     }
 
     @Override

@@ -40,7 +40,7 @@ public record RequesterSyncPacket(boolean clearData, long requesterId, Payload d
     }
 
     public static void handle(RequesterSyncPacket payload, IPayloadContext ignoredContext) {
-        if (Minecraft.getInstance().screen instanceof AbstractRequesterScreen<?> screen) {
+        if (Minecraft.getInstance().gui.screen() instanceof AbstractRequesterScreen<?> screen) {
             screen.updateFromMenu(payload.clearData, payload.requesterId, payload.data);
         }
     }
